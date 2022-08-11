@@ -405,3 +405,6 @@ obj/
 .packages
 
 # End of https://www.toptal.com/developers/gitignore/api/csharp,xamarinstudio
+
+#MacOS File
+.DS_Store
