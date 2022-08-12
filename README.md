@@ -2,7 +2,7 @@
 ![Release](https://img.shields.io/github/repo-size/AN0NCER/steam-lib "Currect Version")
 ![Nuget](https://img.shields.io/nuget/v/SteamAuthStandart)
 
-1
+2
 
 Library for:
   - NET Standart
