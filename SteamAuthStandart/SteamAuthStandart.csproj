@@ -12,6 +12,7 @@
     <NeutralLanguage>en</NeutralLanguage>
     <PackageIcon>steam-logo-2.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
