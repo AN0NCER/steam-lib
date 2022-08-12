@@ -2,9 +2,14 @@
 ![Release](https://img.shields.io/github/repo-size/AN0NCER/steam-lib "Currect Version")
 ![Nuget](https://img.shields.io/nuget/v/SteamAuthStandart)
 
-3
+# Steam Authenticator
 
-Library for:
+<img src="https://github.com/AN0NCER/steam-lib/blob/readme/ReadmeData/shield128.png?raw=true" align="right" />
+
+The library allows you to connect Steam Guard to your account, with the ability to have Steam Guard on multiple devices at the same time.
+
+
+Support for:
   - NET Standart
   - NET Core
   - NET Framework
