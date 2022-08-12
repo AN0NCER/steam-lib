@@ -9,7 +9,7 @@ Library for:
   - NET Framework
 
 # Functionality
-Currently, this library can [WIKI](https://github.com/MaximKolpak/steam-auth/wiki):
+Currently, this library can [WIKI](https://github.com/AN0NCER/steam-lib/wiki):
 
 * Generate login codes for a given Shared Secret
 * Login to a user account
