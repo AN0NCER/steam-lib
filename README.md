@@ -2,16 +2,6 @@
 ![Release](https://img.shields.io/github/repo-size/AN0NCER/steam-lib "Currect Version")
 ![Nuget](https://img.shields.io/nuget/v/SteamAuthStandart)
 
-<div style="display:flex">
-  <img src="https://api.nuget.org/v3-flatcontainer/steamauthstandart/1.0.3/icon" width="25" title="Logo in nuget">
-  <p align="left">The library allows you to connect Steam Guard to your account, with the ability to have Steam Guard on multiple devices at the same time.</p>
-</div>
-
-<img url="" />
-![Image](https://api.nuget.org/v3-flatcontainer/steamauthstandart/1.0.3/icon)
-
-!*[Available from Nuget!]*()
-
 Library for:
   - NET Standart
   - NET Core
