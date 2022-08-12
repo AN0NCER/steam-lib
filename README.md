@@ -1,5 +1,6 @@
 ![Release](https://img.shields.io/github/v/release/AN0NCER/steam-lib "Currect Version")
 ![Release](https://img.shields.io/github/repo-size/AN0NCER/steam-lib "Currect Version")
+![Nuget](https://img.shields.io/nuget/v/SteamAuthStandart)
 
 The library allows you to connect Steam Guard to your account, with the ability to have Steam Guard on multiple devices at the same time.
 
