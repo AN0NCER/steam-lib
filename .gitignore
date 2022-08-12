@@ -408,3 +408,6 @@ obj/
 
 #MacOS File
 .DS_Store
+
+#NuGet GitHub
+nuget.config
