@@ -4,6 +4,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 25.0.1703.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamAuthStandart", "SteamAuthStandart\SteamAuthStandart.csproj", "{6DD25ADB-34FB-4C1F-A75F-E9D7E1463A8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamAuthCore", "SteamAuthCore\SteamAuthCore.csproj", "{162F3ED9-1A78-4025-9CEE-82E0D6166E0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +16,10 @@ Global
 		{6DD25ADB-34FB-4C1F-A75F-E9D7E1463A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DD25ADB-34FB-4C1F-A75F-E9D7E1463A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DD25ADB-34FB-4C1F-A75F-E9D7E1463A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+    {162F3ED9-1A78-4025-9CEE-82E0D6166E0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162F3ED9-1A78-4025-9CEE-82E0D6166E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162F3ED9-1A78-4025-9CEE-82E0D6166E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162F3ED9-1A78-4025-9CEE-82E0D6166E0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
