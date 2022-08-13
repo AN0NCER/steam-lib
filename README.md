@@ -4,7 +4,7 @@
 
 # Steam Authenticator
 
-<img src="https://github.com/AN0NCER/steam-lib/blob/readme/ReadmeData/shield512.png?raw=true" width="128" height="128" align="right" />
+<img src="Who can resume my project?" width="128" height="128" align="right" />
 
 The library allows you to connect Steam Guard to your account, with the ability to have Steam Guard on multiple devices at the same time.
 
