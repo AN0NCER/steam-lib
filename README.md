@@ -35,5 +35,3 @@ To add a mobile authenticator to a user, instantiate a `UserLogin` instance whic
 To fetch mobile confirmations, call `SteamGuardAccount.FetchConfirmations()`. You can then call `SteamGuardAccount.AcceptConfirmation` and `SteamGuardAccount.DenyConfirmation`.
 
 More information in My [**WIKI**](https://github.com/AN0NCER/steam-lib/wiki)
-
-!
