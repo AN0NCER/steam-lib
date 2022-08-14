@@ -1,6 +1,7 @@
 ![Release](https://img.shields.io/github/v/release/AN0NCER/steam-lib "Currect Version")
 ![Release](https://img.shields.io/github/repo-size/AN0NCER/steam-lib "Currect Version")
 ![Nuget](https://img.shields.io/nuget/v/SteamAuthStandart)
+![Downloads](https://img.shields.io/nuget/dt/SteamAuthStandart)
 
 # Steam Authenticator
 
