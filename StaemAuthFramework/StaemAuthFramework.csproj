@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -51,19 +51,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="APIEndpoints.cs" />
-    <Compile Include="AuthenticatorLinker.cs" />
-    <Compile Include="Confirmation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SessionData.cs" />
-    <Compile Include="SteamGuardAccount.cs" />
-    <Compile Include="SteamWeb.cs" />
-    <Compile Include="TimeAligner.cs" />
-    <Compile Include="UserLogin.cs" />
-    <Compile Include="Util.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="..\SteamAuthStandart\APIEndpoints.cs">
+      <Link>APIEndpoints.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\AuthenticatorLinker.cs">
+      <Link>AuthenticatorLinker.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\Confirmation.cs">
+      <Link>Confirmation.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\SessionData.cs">
+      <Link>SessionData.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\SteamGuardAccount.cs">
+      <Link>SteamGuardAccount.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\SteamWeb.cs">
+      <Link>SteamWeb.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\TimeAligner.cs">
+      <Link>TimeAligner.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\UserLogin.cs">
+      <Link>UserLogin.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\Util.cs">
+      <Link>Util.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
