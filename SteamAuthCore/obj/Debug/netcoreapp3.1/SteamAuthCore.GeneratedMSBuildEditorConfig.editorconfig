@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = SteamAuthCore
+build_property.ProjectDir = /Users/anoncer/Github/steam-lib/SteamAuthCore/

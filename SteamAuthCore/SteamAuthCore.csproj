@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\SteamAuthStandart\APIEndpoints.cs">
+      <Link>APIEndpoints.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\AuthenticatorLinker.cs">
+      <Link>AuthenticatorLinker.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\Confirmation.cs">
+      <Link>Confirmation.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\SessionData.cs">
+      <Link>SessionData.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\SteamGuardAccount.cs">
+      <Link>SteamGuardAccount.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\SteamWeb.cs">
+      <Link>SteamWeb.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\TimeAligner.cs">
+      <Link>TimeAligner.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\UserLogin.cs">
+      <Link>UserLogin.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\Util.cs">
+      <Link>Util.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

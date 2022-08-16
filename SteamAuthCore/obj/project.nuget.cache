@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "mqHym/IX7IEsRDOZpnsphSGv6Yli1Pua2mNz5Q8IVRWycWoNLiGuLtHGcszcsXac4wlbaJfnSKy/pNl3J0Jx2w==",
+  "success": true,
+  "projectFilePath": "/Users/anoncer/Github/steam-lib/SteamAuthCore/SteamAuthCore.csproj",
+  "expectedPackageFiles": [
+    "/Users/anoncer/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "/Users/anoncer/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
