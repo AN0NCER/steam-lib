@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Net;
 
 namespace SteamAuth
 {
@@ -21,11 +20,6 @@ namespace SteamAuth
             return ret;
         }
 
-        public static long ConvertSteam64(long steam32)
-        {
-            long base64steam = 76561197960265728;
-            long convert = base64steam + steam32;
-            return convert;
-        }
+        public static long ConvertSteam64(long steam32) => 76561197960265728 + steam32;
     }
 }
