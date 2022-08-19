@@ -39,5 +39,8 @@
     <Compile Include="..\SteamAuthStandart\Util.cs">
       <Link>Util.cs</Link>
     </Compile>
+    <Compile Include="..\SteamAuthStandart\EconService.cs">
+      <Link>EconService.cs</Link>
+    </Compile>
   </ItemGroup>
 </Project>
