@@ -79,6 +79,12 @@
     <Compile Include="..\SteamAuthStandart\Util.cs">
       <Link>Util.cs</Link>
     </Compile>
+    <Compile Include="..\SteamAuthStandart\IEconService.cs">
+      <Link>IEconService.cs</Link>
+    </Compile>
+    <Compile Include="..\SteamAuthStandart\ISteamUser.cs">
+      <Link>ISteamUser.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
