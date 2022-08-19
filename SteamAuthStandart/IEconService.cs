@@ -5,14 +5,14 @@ using Newtonsoft.Json;
 
 namespace SteamAuth
 {
-    public class EconService
+    public class IEconService
     {
         private SessionData _sessionData;
 
         /// <summary>
         /// Additional Steam Economy methods that provide access to Steam Trading.
         /// </summary>
-        public EconService(SessionData session)
+        public IEconService(SessionData session)
         {
             _sessionData = session;
         }
