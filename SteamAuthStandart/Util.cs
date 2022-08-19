@@ -20,5 +20,12 @@ namespace SteamAuth
             }
             return ret;
         }
+
+        public static long ConvertSteam64(long steam32)
+        {
+            long base64steam = 76561197960265728;
+            long convert = base64steam + steam32;
+            return convert;
+        }
     }
 }

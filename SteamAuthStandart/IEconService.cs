@@ -12,10 +12,7 @@ namespace SteamAuth
         /// <summary>
         /// Additional Steam Economy methods that provide access to Steam Trading.
         /// </summary>
-        public IEconService(SessionData session)
-        {
-            _sessionData = session;
-        }
+        public IEconService(SessionData session) => _sessionData = session;
 
         /// <summary>
         /// Gets a specific trade offer
