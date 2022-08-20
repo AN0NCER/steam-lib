@@ -269,7 +269,7 @@ namespace SteamAuth
             public long EscrowEndDate { get; set; }
 
             [JsonProperty("confirmation_method")]
-            public long ConfirmationMethod { get; set; }
+            public ETradeOfferConfirmationMethod ConfirmationMethod { get; set; }
         }
 
         public partial class ItemsToGive
@@ -308,47 +308,67 @@ namespace SteamAuth
             /// <summary>
             /// Invalid
             /// </summary>
-            ETradeOfferStateInvalid = 1,
+            Invalid = 1,
             /// <summary>
             /// This trade offer has been sent, neither party has acted on it yet.
             /// </summary>
-            ETradeOfferStateActive = 2,
+            Active = 2,
             /// <summary>
             /// The trade offer was accepted by the recipient and items were exchanged.
             /// </summary>
-            ETradeOfferStateAccepted = 3,
+            Accepted = 3,
             /// <summary>
             /// The recipient made a counter offer
             /// </summary>
-            ETradeOfferStateCountered = 4,
+            Countered = 4,
             /// <summary>
             /// The trade offer was not accepted before the expiration date
             /// </summary>
-            ETradeOfferStateExpired = 5,
+            Expired = 5,
             /// <summary>
             /// The sender cancelled the offer
             /// </summary>
-            ETradeOfferStateCanceled = 6,
+            Canceled = 6,
             /// <summary>
             /// The recipient declined the offer
             /// </summary>
-            ETradeOfferStateDeclined = 7,
+            Declined = 7,
             /// <summary>
             /// Some of the items in the offer are no longer available (indicated by the missing flag in the output)
             /// </summary>
-            ETradeOfferStateInvalidItems = 8,
+            InvalidItems = 8,
             /// <summary>
             /// The offer hasn't been sent yet and is awaiting email/mobile confirmation. The offer is only visible to the sender.
             /// </summary>
-            ETradeOfferStateCreatedNeedsConfirmation = 9,
+            CreatedNeedsConfirmation = 9,
             /// <summary>
             /// Either party canceled the offer via email/mobile.The offer is visible to both parties, even if the sender canceled it before it was sent.
             /// </summary>
-            ETradeOfferStateCanceledBySecondFactor = 10,
+            CanceledBySecondFactor = 10,
             /// <summary>
             /// The trade has been placed on hold.The items involved in the trade have all been removed from both parties' inventories and will be automatically delivered in the future.
             /// </summary>
-            ETradeOfferStateInEscrow = 11
+            InEscrow = 11
+        }
+
+        /// <summary>
+        /// These are the different methods in which a trade offer can be confirmed.
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ETradeOfferConfirmationMethod
+        {
+            /// <summary>
+            /// Invalid
+            /// </summary>
+            Invalid = 0,
+            /// <summary>
+            /// An email was sent with details on how to confirm the trade offer
+            /// </summary>
+            Email = 1,
+            /// <summary>
+            /// The trade offer may be confirmed via the mobile app
+            /// </summary>
+            MobileApp = 2
         }
     }
 }
