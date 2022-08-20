@@ -17,7 +17,7 @@ namespace SteamAuth
         /// Gets information about a Steam user
         /// </summary>
         /// <param name="steamids">Comma-delimited list of SteamIDs (max: 100)</param>
-        public SteamResponseUsers GetPlayerSummaries(params string[] steamids)
+        public SteamResponseUsers.Response GetPlayerSummaries(params string[] steamids)
         {
             string ids = String.Join(",", steamids);
             string url = $"{APIEndpoints.STEAMAPI_BASE}/ISteamUser/GetPlayerSummaries/v2/?access_token=" +
@@ -25,7 +25,8 @@ namespace SteamAuth
                 $"{nameof(steamids)}={ids}&key=";
 
             string response = SteamWeb.Request(url, "GET", "");
-            return JsonConvert.DeserializeObject<SteamResponseUsers>(response);
+            SteamResponseUsers steamResponseUsers = JsonConvert.DeserializeObject<SteamResponseUsers>(response);
+            return steamResponseUsers.UserResponse;
         }
     }
 

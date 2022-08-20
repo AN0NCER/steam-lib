@@ -1,5 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Reflection;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using static SteamAuth.TradeResponseOffer;
 
 namespace SteamAuth
 {
@@ -17,7 +22,7 @@ namespace SteamAuth
         /// </summary>
         /// <param name="tradeofferid">ID offer</param>
         /// <param name="get_descriptions">If set, the item display data for the items included in the returned trade offers will also be returned. If one or more descriptions can't be retrieved, then your request will fail.</param>
-        public TradeResponseOffer GetTradeOffer(ulong tradeofferid,bool get_descriptions = true)
+        public TradeResponseOffer.Response GetTradeOffer(ulong tradeofferid, bool get_descriptions = true)
         {
             string url = $"{APIEndpoints.STEAMAPI_BASE}/IEconService/GetTradeOffer/v1/?access_token=" +
                 $"{_sessionData.OAuthToken}&" +
@@ -25,7 +30,8 @@ namespace SteamAuth
                 $"{nameof(get_descriptions)}={get_descriptions}";
 
             string response = SteamWeb.Request(url, "GET", "");
-            return JsonConvert.DeserializeObject<TradeResponseOffer>(response);
+            TradeResponseOffer tradeResponseOffer = JsonConvert.DeserializeObject<TradeResponseOffer>(response);
+            return tradeResponseOffer.TradeResponse;
         }
 
 
@@ -37,7 +43,7 @@ namespace SteamAuth
         /// <param name="get_descriptions">If set, the item display data for the items included in the returned trade offers will also be returned. If one or more descriptions can't be retrieved, then your request will fail.</param>
         /// <param name="active_only">Indicates we should only return offers which are still active, or offers that have changed in state since the time_historical_cutoff</param>
         /// <param name="historical_only">Indicates we should only return offers which are not active.</param>
-        public TradeResponseOffers GetTradeOffers(bool get_sent_offers = false,bool get_received_offers = false,bool get_descriptions = true,bool active_only = false,bool historical_only = false)
+        public TradeResponseOffers.Response GetTradeOffers(bool get_sent_offers = false, bool get_received_offers = false, bool get_descriptions = true, bool active_only = false, bool historical_only = false)
         {
             string url = $"" +
                 $"{APIEndpoints.STEAMAPI_BASE}/IEconService/GetTradeOffers/v1/?access_token=" +
@@ -49,7 +55,8 @@ namespace SteamAuth
                 $"{nameof(historical_only)}={historical_only}";
 
             string response = SteamWeb.Request(url, "GET", "");
-            return JsonConvert.DeserializeObject<TradeResponseOffers>(response);
+            TradeResponseOffers tradeResponseOffers = JsonConvert.DeserializeObject<TradeResponseOffers>(response);
+            return tradeResponseOffers.TradeResponse;
         }
     }
 
@@ -241,7 +248,7 @@ namespace SteamAuth
             public long ExpirationTime { get; set; }
 
             [JsonProperty("trade_offer_state")]
-            public long TradeOfferState { get; set; }
+            public ETradeOfferState TradeOfferState { get; set; }
 
             [JsonProperty("items_to_give")]
             public List<ItemsToGive> ItemsToGive { get; set; }
@@ -290,6 +297,58 @@ namespace SteamAuth
 
             [JsonProperty("est_usd")]
             public long EstUsd { get; set; }
+        }
+
+        /// <summary>
+        /// These are the different states for a trade offer
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum ETradeOfferState
+        {
+            /// <summary>
+            /// Invalid
+            /// </summary>
+            ETradeOfferStateInvalid = 1,
+            /// <summary>
+            /// This trade offer has been sent, neither party has acted on it yet.
+            /// </summary>
+            ETradeOfferStateActive = 2,
+            /// <summary>
+            /// The trade offer was accepted by the recipient and items were exchanged.
+            /// </summary>
+            ETradeOfferStateAccepted = 3,
+            /// <summary>
+            /// The recipient made a counter offer
+            /// </summary>
+            ETradeOfferStateCountered = 4,
+            /// <summary>
+            /// The trade offer was not accepted before the expiration date
+            /// </summary>
+            ETradeOfferStateExpired = 5,
+            /// <summary>
+            /// The sender cancelled the offer
+            /// </summary>
+            ETradeOfferStateCanceled = 6,
+            /// <summary>
+            /// The recipient declined the offer
+            /// </summary>
+            ETradeOfferStateDeclined = 7,
+            /// <summary>
+            /// Some of the items in the offer are no longer available (indicated by the missing flag in the output)
+            /// </summary>
+            ETradeOfferStateInvalidItems = 8,
+            /// <summary>
+            /// The offer hasn't been sent yet and is awaiting email/mobile confirmation. The offer is only visible to the sender.
+            /// </summary>
+            ETradeOfferStateCreatedNeedsConfirmation = 9,
+            /// <summary>
+            /// Either party canceled the offer via email/mobile.The offer is visible to both parties, even if the sender canceled it before it was sent.
+            /// </summary>
+            ETradeOfferStateCanceledBySecondFactor = 10,
+            /// <summary>
+            /// The trade has been placed on hold.The items involved in the trade have all been removed from both parties' inventories and will be automatically delivered in the future.
+            /// </summary>
+            ETradeOfferStateInEscrow = 11
         }
     }
 }
