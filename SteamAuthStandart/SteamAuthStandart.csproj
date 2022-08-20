@@ -13,6 +13,8 @@
     <PackageIcon>steam-logo-2.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <ReleaseVersion>1.0.6</ReleaseVersion>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
   </PropertyGroup>
 
   <ItemGroup>
